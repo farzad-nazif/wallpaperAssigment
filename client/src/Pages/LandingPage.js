@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchBox from './components/SearchBox';
 import logo from "./logo.jpg"
 import "../App.css";
 
@@ -16,20 +17,22 @@ function LandingPage() {
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="/">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Products</a>
+          <a class="nav-link" href="/">Products</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Find a store</a>
+          <a class="nav-link" href="/">Find a store</a>
         </li>
       </ul>
       </div>
       </div>
       </nav>
 
-      <main className='landingMainBody' >Main body</main>
+      <main className='landingMainBody' >
+        <SearchBox />
+      </main>
       <footer className='landingFooter' >footer</footer>
     </div>
   )
