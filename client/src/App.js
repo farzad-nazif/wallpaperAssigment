@@ -1,8 +1,8 @@
-import GetCustomerDetails from "./components/GetCustomerDetails";
-import LandingPage from "./components/LandingPage";
-import WallpaperSimulation from "./components/WallpaperSimulation";
-import Checkout from "./components/Checkout";
-import Results from "./components/Results";
+import GetCustomerDetails from "./Pages/GetCustomerDetails";
+import LandingPage from "./Pages/LandingPage";
+import WallpaperSimulation from "./Pages/WallpaperSimulation";
+import Checkout from "./Pages/Checkout";
+import Results from "./Pages/Results";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 

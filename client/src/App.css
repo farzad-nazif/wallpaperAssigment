@@ -1,3 +1,26 @@
-.App {
-  text-align: center;
+/* Landing page */
+.landingBody {
+  height: 100vh;
+  background-image: url(./wallpaper\ warhouse.jpg);
+  background-size: cover;
+}
+
+.landingNavBar{
+  height: 10vh;
+  background-color: white;
+  display: flex;
+}
+
+.landingMainBody{
+  height: 80vh;
+}
+
+.landingFooter{
+  height: 10vh;
+  background-color: #6c584c;
+}
+
+#logo{
+  width: 10rem;
+  height: auto;
 }
