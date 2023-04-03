@@ -22,6 +22,9 @@
 }
 
 .landingFooter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 10vh;
   background-color: #6c584c;
 }
@@ -74,4 +77,46 @@
 .nav-link{
   font-weight: bolder;
   font-size: 1.2rem;
+}
+
+/* Footer section */
+
+.social-icons{
+  margin: 1.2rem;
+}
+
+.fab{
+  color: white;
+}
+
+.fas{
+  color: rgb(234, 3, 3);
+}
+
+.contactIcons{
+  color: white;
+}
+
+.social-icons li,
+.contact-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons i,
+.contact-icons i {
+  font-size: 24px;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-icons i:hover,
+.contact-icons i:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .social-icons i,
+  .contact-icons i {
+    font-size: 20px;
+  }
 }

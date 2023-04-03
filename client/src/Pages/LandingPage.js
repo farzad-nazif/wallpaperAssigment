@@ -1,4 +1,5 @@
 import React from 'react';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import SearchBox from './components/SearchBox';
 import logo from "./logo.jpg"
 import "../App.css";
@@ -34,7 +35,19 @@ function LandingPage() {
         <h1 id='searchSentence' >Search your chosen wallpaper!</h1>
         <SearchBox />
       </main>
-      <footer className='landingFooter' >footer</footer>
+
+      <footer className='landingFooter' >
+        <ul class="social-icons">
+          <li><a href="/"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="/"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="/"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="/"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="https://github.com/farzad-nazif/wallpaperAssigment"  target="_blank" rel="noopener noreferrer"><i class="fab fa-brands fa-github"></i></a></li>
+          <li className='contactIcons'><i class="fas fa-envelope"></i> farzadnazif.nz@gmail.com</li>
+          <li className='contactIcons'><i class="fas fa-phone"></i> 073571 </li>
+          <li className='contactIcons'><i class="fas fa-map-marker-alt"></i> Kingston, UK </li>
+        </ul>
+      </footer>
     </div>
   )
 }
