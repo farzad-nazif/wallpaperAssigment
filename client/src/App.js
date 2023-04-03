@@ -1,4 +1,5 @@
 import About from "./Pages/About";
+import Products from "./Pages/Products";
 import GetCustomerDetails from "./Pages/GetCustomerDetails";
 import LandingPage from "./Pages/LandingPage";
 import WallpaperSimulation from "./Pages/WallpaperSimulation";
@@ -12,6 +13,7 @@ function App() {
      <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/about" element={<About />} />
+      <Route path="/products" element={<Products />} />
       <Route path="/getcustomerdetails" element={<GetCustomerDetails />} />
       <Route path="/wallpapersimulation" element={<WallpaperSimulation />} />
       <Route path="/checkout" element={<Checkout />} />
