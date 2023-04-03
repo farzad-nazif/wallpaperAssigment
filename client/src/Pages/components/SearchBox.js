@@ -1,9 +1,10 @@
 import React from 'react';
+import "../../App.css"
 
 function SearchBox() {
   return (
     <div>
-    SearchBox
+    <input type="text" id='searchBox'/>
     </div>
   )
 }

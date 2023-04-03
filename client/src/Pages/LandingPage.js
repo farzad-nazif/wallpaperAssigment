@@ -31,6 +31,7 @@ function LandingPage() {
       </nav>
 
       <main className='landingMainBody' >
+        <h1 id='searchSentence' >Search your chosen wallpaper!</h1>
         <SearchBox />
       </main>
       <footer className='landingFooter' >footer</footer>

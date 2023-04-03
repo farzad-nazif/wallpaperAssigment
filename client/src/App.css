@@ -12,7 +12,13 @@
 }
 
 .landingMainBody{
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
   height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .landingFooter{
@@ -23,4 +29,31 @@
 #logo{
   width: 10rem;
   height: auto;
+}
+
+.container-fluid{
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+#searchSentence{
+  color: white;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#searchBox{
+  padding: 1rem 20vw;
+  border: 2px solid #555;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-family: "Helvetica Neue", sans-serif;
+  color: #555;
+  background-color: #f9f9f9;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#searchBox:focus {
+  outline: none;
+  border-color: #392519;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
