@@ -1,14 +1,12 @@
 import React from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import SearchBox from './components/SearchBox';
 import logo from "./logo.jpg"
 import "../App.css";
 
-function LandingPage() {
+function About() {
   return (
-    <div className='landingBody'>
-
-    <nav class="navbar navbar-expand-lg  landingNavBar">
+    <div className='aboutBody'>
+      <nav class="navbar navbar-expand-lg  landingNavBar">
     <div class="container-fluid">
     <img src={logo} alt="logo" id='logo' />
     <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,22 +16,26 @@ function LandingPage() {
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="/about">About</a>
+          <a class="nav-link" href="/">About</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
         </li>
       </ul>
       </div>
       </div>
       </nav>
 
-      <main className='landingMainBody' >
-        <h1 id='searchSentence' >Search your chosen wallpaper!</h1>
-        <SearchBox />
+      <main className='aboutMainBody' >
+      <h4 className='aboutWarehouse'>
+        Welcome to our wallpaper warehouse business! We are passionate about helping our customers transform their living and working spaces with stunning and unique wallpaper designs. Our warehouse is stocked with a wide variety of wallpaper options, from traditional to modern, colorful to subtle, and everything in between. With so many choices, you're sure to find the perfect wallpaper to express your individual style and personality.
+        </h4>
       </main>
 
-      <footer className='landingFooter' >
+      <footer className='aboutFooter' >
         <ul class="social-icons">
           <li><a href="/"><i class="fab fa-facebook-f"></i></a></li>
           <li><a href="/"><i class="fab fa-twitter"></i></a></li>
@@ -49,4 +51,4 @@ function LandingPage() {
   )
 }
 
-export default LandingPage
+export default About

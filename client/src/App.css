@@ -5,6 +5,12 @@
   background-size: cover;
 }
 
+.aboutBody{
+  height: 100vh;
+  background-image: url(./about.jpg);
+  background-size: cover;
+}
+
 .landingNavBar{
   height: 11vh;
   background-color: white;
@@ -21,7 +27,25 @@
   justify-content: center;
 }
 
+.aboutMainBody{
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .landingFooter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  background-color: #6c584c;
+}
+
+.aboutFooter{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -119,4 +143,17 @@
   .contact-icons i {
     font-size: 20px;
   }
+}
+
+.aboutWarehouse{
+  width: 50%;
+  background-color: white;
+  padding: 3%;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+  text-align: center;
+  font-size: large;
+  color: rgb(30, 29, 29);
+  margin: 2%;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
 }
