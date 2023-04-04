@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import WallpaperCard from './components/WallpaperCard';
 import wallpapers from "../wallpepers";
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -15,6 +15,23 @@ function PurchaseForm() {
     const [length, setLength] = useState(null);
     const [width, setWidth] = useState(null);
     const [height, setHeight] = useState(null);
+    const [totalRolls,setTotalRolls] = useState(0);
+    const [totalCost,setTotalCost] = useState(0);
+
+    useEffect(()=>{
+      calculatingTotalRolls();
+      // eslint-disable-next-line
+    },[length,width,height])
+    
+    useEffect(()=>{
+      let rollPrice = 0;
+      if(totalRolls){
+        wallpapers.forEach((wallpaper)=>{ if(wallpaper.title === selectedWallpaper){ rollPrice = wallpaper.price } });
+        let totalCost = rollPrice * totalRolls;
+        setTotalCost(totalCost);
+      }
+      // eslint-disable-next-line
+    },[totalRolls,selectedWallpaper])
 
 
     function searchAddress() {
@@ -58,7 +75,21 @@ function PurchaseForm() {
     function handleWallpaperChange(event) {
         // Add code here to handle the selected address
         setSelectedWallpaper(event.target.value);
-      }
+    }
+
+    const calculatingTotalRolls = () => {
+         if(length&&width&&height){
+            let lengthNumber = parseInt(length); 
+            let widthNumber = parseInt(width); 
+            let heightNumber = parseInt(height);
+            // let totalSurface = lengthNumber * widthNumber * heightNumber;
+            let perimeter = 2 * (lengthNumber + widthNumber);
+            let wallArea = perimeter * heightNumber;
+
+            let totalRolls = wallArea / 2.5;
+            setTotalRolls(Math.ceil(totalRolls)); 
+         }
+    }
   
   return (
     <div className='purchaseBody'>
@@ -107,13 +138,13 @@ function PurchaseForm() {
 
       <label htmlFor="wallpaper" >Wallpapers:</label>
       <select id="wallpaper" name="wallpaper" value={selectedWallpaper} onChange={handleWallpaperChange} required>
-        <option >Please select a wallpaper</option>
+        <option value="">Please select a wallpaper</option>
         {wallpapers.map((wallpaper) => (
           <option key={wallpaper.title} value={wallpaper.title} > {wallpaper.title} Price is: {wallpaper.price}£</option>
         ))}
       </select>
 
-      <label>Dimension:</label>
+      <label>Dimension (in m):</label>
       <input type="text" id="length" name="length" value={length} onChange={handleLengthChange} placeholder="length" required />
       <input type="text" id="address1" name="address1" value={width} onChange={handleWidthChange} placeholder="Width" required />
       <input type="text" id="address1" name="address1" value={height} onChange={handleHeightChange} placeholder="height" required />
@@ -137,10 +168,10 @@ function PurchaseForm() {
    <div className='results'>
    <div class="card">
   <div class="card-body">
-    <h5 class="card-title">Total Cost</h5>
-    <p class="card-text">121£</p>
-    <h5 class="card-title">Total rolls needed</h5>
-    <p class="card-text">10 rolls</p>
+    <h5 class="card-title">Total Cost:</h5>
+    <p class="card-text">{ length&&width&&height?totalCost:"Incomplete order!"} { length&&width&&height?"£":""}</p>
+    <h5 class="card-title">Total rolls needed:</h5>
+    <p class="card-text">{length&&width&&height?totalRolls:"Incomplete order!"} {length&&width&&height?"rolls":""}</p>
   </div>
 </div>
    </div>
