@@ -16,10 +16,7 @@ function About() {
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="/">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/">Products</a>
+          <a class="nav-link" href="/products">Products</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/">Home</a>

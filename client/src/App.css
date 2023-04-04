@@ -163,7 +163,7 @@
 .card{
   width: 40vw;
   height: auto;
-  padding: 1.5rem;
+  padding: 1.2rem;
 }
 
 .card-body{
@@ -173,6 +173,10 @@
   height: 100%;
   width: 100%;
   margin-top: 2rem;
+}
+
+.card-body > *{
+  margin-right: 1.2rem;
 }
 
 .card-img-top{
@@ -197,6 +201,36 @@
 
 .productMainBody{
   padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 5vh;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.optionWall{
+  background-color: red;
+}
+
+.productMainBody{
+  display: flex;
+  flex-direction: row;
+}
+
+.purchaseForm{
+  display: flex;
+  flex-direction: column;
+}
+
+.purchaseForm > * {
+  margin-bottom: 0.9rem;
+}
+
+.purchaseMainbody{
+  padding: 2rem;
+  padding-bottom: 4rem;
   display: flex;
   flex-direction: row;
   gap: 5vh;
