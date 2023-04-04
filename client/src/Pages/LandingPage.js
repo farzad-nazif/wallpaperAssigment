@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import SearchBox from './components/SearchBox';
 import logo from "./logo.jpg"
@@ -24,7 +25,8 @@ function LandingPage() {
           <a class="nav-link" href="/products">Products</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/purchase">Buy wallpapers</a>
+          {/* <a class="nav-link" href="/purchase">Buy wallpapers</a> */}
+          <Link to="/purchase"></Link>
         </li>
       </ul>
       </div>
