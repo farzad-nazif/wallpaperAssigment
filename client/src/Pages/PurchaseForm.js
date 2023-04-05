@@ -38,57 +38,67 @@ function PurchaseForm() {
 
 
     function searchAddress() {
-      // Add code here to search for addresses based on postcode
-      // and set the addresses state
       fetch(`https://remote.address44.com/v2/exapi/?access-key=EXRC55TI5GQ3N2QT63_224_168_XKM5IMJTV_8JKR0VDQ6FUQH8&postcode=${postcode}`).then((response) => response.json()).then((data)=>{setAddresses(data)})
     }
-  
+    
+    function containsNumbersOrSpecialCharacter(str) {
+      return /[\W\d]/.test(str);
+    }
+
     function handleFirstNameChange(event) {
-      setFirstName(event.target.value);
+      let firstName = event.target.value;
+      let isNumberIncluded = containsNumbersOrSpecialCharacter(firstName);
+      if(!isNumberIncluded){
+        setFirstName(firstName);
+      } 
     }
   
     function handleLastNameChange(event) {
-      setLastName(event.target.value);
+      let lastName = event.target.value;
+      let isNumberIncluded = containsNumbersOrSpecialCharacter(lastName);
+      if(!isNumberIncluded){
+        setLastName(event.target.value);
+      }
     }
   
     function handlePostcodeChange(event) {
-      setPostcode(event.target.value);
+      setPostcode(event.target.value.toUpperCase());
     }
   
     function handleAddressChange(event) {
-      // Add code here to handle the selected address
       setSelectedAddress(event.target.value);
     }
     
     function handleLengthChange(event) {
-        // Add code here to handle the selected address
-        setLength(event.target.value);
+      setLength(event.target.value);
     }
     
     function handleWidthChange(event) {
-        // Add code here to handle the selected address
-        setWidth(event.target.value);
+      setWidth(event.target.value);
     }
 
     function handleHeightChange(event) {
-        // Add code here to handle the selected address
-        setHeight(event.target.value);
+      setHeight(event.target.value);
     }
 
     function handleWallpaperChange(event) {
-        // Add code here to handle the selected address
-        setSelectedWallpaper(event.target.value);
+      setSelectedWallpaper(event.target.value);
     }
 
     const calculatingTotalRolls = () => {
-         if(length&&width&&height){
-            let lengthNumber = parseInt(length); 
-            let widthNumber = parseInt(width); 
-            let heightNumber = parseInt(height);
-            let wallArea = 2 * ((lengthNumber * heightNumber)+(widthNumber*heightNumber));
-            let totalRolls = wallArea / 2.5;
-            setTotalRolls(Math.ceil(totalRolls)); 
-         }
+      if(length&&width&&height){
+        let lengthNumber = parseInt(length); 
+        let widthNumber = parseInt(width); 
+        let heightNumber = parseInt(height);
+        let wallArea = 2 * ((lengthNumber * heightNumber)+(widthNumber*heightNumber));
+        let totalRolls = wallArea / 2.5;
+        setTotalRolls(Math.ceil(totalRolls)); 
+      }
+    }
+
+    const handleBuy = (event) => {
+   		event.preventDefault();
+      window.location.href = "/";
     }
   
   return (
@@ -114,20 +124,20 @@ function PurchaseForm() {
       </nav>
 
       <main className='purchaseMainbody' >
-      <form className='purchaseForm'>
+      <form onSubmit={handleBuy} className='purchaseForm'>
       <label htmlFor="firstName">First Name:</label>
-      <input type="text" id="firstName" name="firstName" value={firstName} onChange={handleFirstNameChange} required />
+      <input type="text" id="firstName" name="firstName" maxLength="20" value={firstName} onChange={handleFirstNameChange} required />
 
       <label htmlFor="lastName">Last Name:</label>
-      <input type="text" id="lastName" name="lastName" value={lastName} onChange={handleLastNameChange} required />
+      <input type="text" id="lastName" name="lastName" maxLength="20" value={lastName} onChange={handleLastNameChange} required />
 
-      <label htmlFor="address1">Full address:</label>
-      <input type="text" id="address1" name="address1" value={selectedAddress} onChange={handleAddressChange} required />
+      <label htmlFor="address">Full address:</label>
+      <input type="text" id="address" name="address" maxLength="100" value={selectedAddress} onChange={handleAddressChange} required />
 
 
       <div className="postcode">
         <label htmlFor="postcode">Postcode:</label>
-        <input type="text" id="postcode" name="postcode" value={postcode} onChange={handlePostcodeChange} />
+        <input type="text" id="postcode" name="postcode" maxLength="10" value={postcode} onChange={handlePostcodeChange} required />
         <button type="button" onClick={searchAddress}>Search</button>
       </div>
 
