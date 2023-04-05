@@ -25,6 +25,9 @@ function PurchaseForm() {
     
     useEffect(()=>{
       let rollPrice = 0;
+      if(totalRolls===0){
+        setTotalCost(0)
+      }
       if(totalRolls){
         wallpapers.forEach((wallpaper)=>{ if(wallpaper.title === selectedWallpaper){ rollPrice = wallpaper.price } });
         let totalCost = rollPrice * totalRolls;
@@ -82,10 +85,7 @@ function PurchaseForm() {
             let lengthNumber = parseInt(length); 
             let widthNumber = parseInt(width); 
             let heightNumber = parseInt(height);
-            // let totalSurface = lengthNumber * widthNumber * heightNumber;
-            let perimeter = 2 * (lengthNumber + widthNumber);
-            let wallArea = perimeter * heightNumber;
-
+            let wallArea = 2 * ((lengthNumber * heightNumber)+(widthNumber*heightNumber));
             let totalRolls = wallArea / 2.5;
             setTotalRolls(Math.ceil(totalRolls)); 
          }
@@ -131,8 +131,8 @@ function PurchaseForm() {
         <button type="button" onClick={searchAddress}>Search</button>
       </div>
 
-      <label htmlFor="address">Address:</label>
-      <select id="address" name="address" value={selectedAddress} onChange={handleAddressChange} required>
+      <label htmlFor="address">Addresses:</label>
+      <select id="address" name="address" value={selectedAddress} onChange={handleAddressChange}>
         <option >Please select an address</option>
         {addresses.map((address) => (
           <option key={address.id} value={address.id}>{address.building_number}, {address.thoroughfare_and_descriptor}, {address.post_town}</option>
@@ -147,13 +147,16 @@ function PurchaseForm() {
         ))}
       </select>
 
-      <label>Dimension (in m):</label>
-      <input type="text" id="length" name="length" value={length} onChange={handleLengthChange} placeholder="length" required />
-      <input type="text" id="address1" name="address1" value={width} onChange={handleWidthChange} placeholder="Width" required />
-      <input type="text" id="address1" name="address1" value={height} onChange={handleHeightChange} placeholder="height" required />
+      <label>Room Dimension (in m):</label>
+      <label htmlFor="length">{length?"Selected length :":"Default length :"} {length?length:"1"}m</label>
+      <input type="range" min="1" max="100" step="0.1" defaultValue="1" id="length" name="length" value={length} onChange={handleLengthChange} placeholder="length" required />
+      <label htmlFor="width">{width?"Selected width :":"Default width :"} {width?width:"1"}m</label>
+      <input type="range" min="1" max="100" step="0.1" defaultValue="1" id="width" name="width" value={width} onChange={handleWidthChange} placeholder="Width" required />
+      <label htmlFor="height">{height?"Selected height :":"Default height :"} {height?height:"1"}m</label>
+      <input type="range" min="1" max="100" step="0.1" defaultValue="1" id="height" name="height" value={height} onChange={handleHeightChange} placeholder="height" required />
 
 
-      <input type="submit" value="Submit" />
+      <input type="submit" value="Buy" />
     </form>
     
     <div className='resultSection'>
