@@ -219,13 +219,34 @@
   flex-direction: row;
 }
 
+.purchaseBody{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1101%26quot%3b)' fill='none'%3e%3cpath d='M1429 422L1428 621' stroke-width='6' stroke='url(%23SvgjsLinearGradient1102)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M1008 114L1007 463' stroke-width='8' stroke='url(%23SvgjsLinearGradient1103)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M753 174L752 -217' stroke-width='10' stroke='url(%23SvgjsLinearGradient1103)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M447 451L446 296' stroke-width='10' stroke='url(%23SvgjsLinearGradient1102)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M983 81L982 -102' stroke-width='10' stroke='url(%23SvgjsLinearGradient1102)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M730 266L729 -95' stroke-width='10' stroke='url(%23SvgjsLinearGradient1102)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M1384 285L1383 -117' stroke-width='8' stroke='url(%23SvgjsLinearGradient1102)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M147 54L146 309' stroke-width='8' stroke='url(%23SvgjsLinearGradient1102)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M475 360L474 550' stroke-width='8' stroke='url(%23SvgjsLinearGradient1103)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M523 179L522 -31' stroke-width='8' stroke='url(%23SvgjsLinearGradient1102)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M342 222L341 369' stroke-width='10' stroke='url(%23SvgjsLinearGradient1102)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M1125 472L1124 164' stroke-width='10' stroke='url(%23SvgjsLinearGradient1103)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M1371 13L1370 -142' stroke-width='6' stroke='url(%23SvgjsLinearGradient1102)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M901 165L900 390' stroke-width='8' stroke='url(%23SvgjsLinearGradient1103)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M393 330L392 530' stroke-width='6' stroke='url(%23SvgjsLinearGradient1102)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M23 259L22 410' stroke-width='10' stroke='url(%23SvgjsLinearGradient1103)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M326 487L325 241' stroke-width='8' stroke='url(%23SvgjsLinearGradient1102)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M1316 465L1315 313' stroke-width='6' stroke='url(%23SvgjsLinearGradient1103)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M540 273L539 638' stroke-width='6' stroke='url(%23SvgjsLinearGradient1103)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M612 341L611 149' stroke-width='6' stroke='url(%23SvgjsLinearGradient1103)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M954 486L953 329' stroke-width='6' stroke='url(%23SvgjsLinearGradient1103)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M646 186L645 332' stroke-width='8' stroke='url(%23SvgjsLinearGradient1103)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M1378 146L1377 512' stroke-width='10' stroke='url(%23SvgjsLinearGradient1102)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M668 331L667 103' stroke-width='8' stroke='url(%23SvgjsLinearGradient1102)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M468 487L467 322' stroke-width='6' stroke='url(%23SvgjsLinearGradient1102)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M1198 304L1197 692' stroke-width='6' stroke='url(%23SvgjsLinearGradient1103)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M322 14L321 -297' stroke-width='8' stroke='url(%23SvgjsLinearGradient1103)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M1251 76L1250 -164' stroke-width='10' stroke='url(%23SvgjsLinearGradient1102)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M475 425L474 803' stroke-width='8' stroke='url(%23SvgjsLinearGradient1102)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M839 213L838 45' stroke-width='6' stroke='url(%23SvgjsLinearGradient1103)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M1188 471L1187 81' stroke-width='10' stroke='url(%23SvgjsLinearGradient1102)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M1062 390L1061 716' stroke-width='8' stroke='url(%23SvgjsLinearGradient1103)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M1157 512L1156 702' stroke-width='6' stroke='url(%23SvgjsLinearGradient1102)' stroke-linecap='round' class='Up'%3e%3c/path%3e%3cpath d='M183 315L182 -50' stroke-width='6' stroke='url(%23SvgjsLinearGradient1103)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M1108 157L1107 -66' stroke-width='6' stroke='url(%23SvgjsLinearGradient1103)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3cpath d='M295 317L294 632' stroke-width='6' stroke='url(%23SvgjsLinearGradient1103)' stroke-linecap='round' class='Down'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1101'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1102'%3e%3cstop stop-color='rgba(182%2c 130%2c 18%2c 0)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(182%2c 130%2c 18%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='0%25' y1='0%25' x2='0%25' y2='100%25' id='SvgjsLinearGradient1103'%3e%3cstop stop-color='rgba(182%2c 130%2c 18%2c 0)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(182%2c 130%2c 18%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+
+}
+
 .purchaseForm{
   display: flex;
   flex-direction: column;
+  background-color: rgb(254, 244, 224);
+  padding: 1.2rem;
+  border-radius: 10px;
 }
 
 .purchaseForm > * {
   margin-bottom: 0.9rem;
+  border-radius: 4px;
+  border-color: rgb(225, 223, 223);
+}
+
+.purchaseForm > label {
+  font-weight: bold;
+}
+
+.purchaseFormBtns{
+  margin-left: 1rem;
+  background-color: #e6edc5;
+  border-color: rgb(225, 223, 223);
+  font-weight: 400;
 }
 
 .purchaseMainbody{

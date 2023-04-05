@@ -98,7 +98,7 @@ function PurchaseForm() {
 
     const handleBuy = (event) => {
    		event.preventDefault();
-      window.location.href = "/";
+      window.location.href = "/checkout";
     }
   
   return (
@@ -136,9 +136,9 @@ function PurchaseForm() {
 
 
       <div className="postcode">
-        <label htmlFor="postcode">Postcode:</label>
+        <label htmlFor="postcode">Postcode : </label>
         <input type="text" id="postcode" name="postcode" maxLength="10" value={postcode} onChange={handlePostcodeChange} required />
-        <button type="button" onClick={searchAddress}>Search</button>
+        <button type="button" className='purchaseFormBtns' onClick={searchAddress}>Search</button>
       </div>
 
       <label htmlFor="address">Addresses:</label>
@@ -166,7 +166,7 @@ function PurchaseForm() {
       <input type="range" min="1" max="100" step="0.1" defaultValue="1" id="height" name="height" value={height} onChange={handleHeightChange} placeholder="height" required />
 
 
-      <input type="submit" value="Buy" />
+      <button type='submit' className='purchaseFormBtns'>Buy</button>
     </form>
     
     <div className='resultSection'>
