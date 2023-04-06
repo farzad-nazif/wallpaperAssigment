@@ -38,7 +38,7 @@ function PurchaseForm() {
 
 
     function searchAddress() {
-      fetch(`https://remote.address44.com/v2/exapi/?access-key=EXRC55TI5GQ3N2QT63_224_168_XKM5IMJTV_8JKR0VDQ6FUQH8&postcode=${postcode}`).then((response) => response.json()).then((data)=>{setAddresses(data)})
+      fetch(`https://remote.address44.com/v2/exapi/?access-key=${process.env.REACT_APP_API_KEY}&postcode=${postcode}`).then((response) => response.json()).then((data)=>{setAddresses(data)})
     }
     
     function containsNumbersOrSpecialCharacter(str) {
